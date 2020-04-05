@@ -43,7 +43,7 @@ pipeline {
    }
     stage('deploy or deliver to test server'){
          steps{
-            deploy adapters: [tomcat8(credentialsId: '45ca00c2-79ff-4e10-9725-721a8308e37e', path: '', url: 'http://localhost:9090/')], contextPath: 'project', war: '**/*.war'
+              deploy adapters: [tomcat9(credentialsId: 'b63ce927-d2f5-46b4-916f-31702814f93d', path: '', url: 'http://localhost:8088/')], contextPath: 'login', war: '**/*.war'
          }
       }
        stage('cucumber report'){
