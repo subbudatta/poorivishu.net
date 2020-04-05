@@ -12,13 +12,6 @@ pipeline {
    bat label: '', script: 'mvn clean install'
    }
    }
-      stage('compile'){
-            steps{
-               bat label: '', script: '''mvn compile
-
-'''
-            }
-            }
                
    stage('build'){
        steps{
